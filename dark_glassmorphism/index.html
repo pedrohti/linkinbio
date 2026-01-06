@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link href="dark_glassmorphism.css" rel="stylesheet" />
+    <title>Your Name - Links</title>
+    <!-- Google Analytics (replace with your tracking ID) -->
+    <script
+      async
+      src="https://www.googletagmanager.com/gtag/js?id=GA_MEASUREMENT_ID"
+    ></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag() {
+        dataLayer.push(arguments);
+      }
+      gtag("js", new Date());
+      gtag("config", "GA_MEASUREMENT_ID");
+    </script>
+  </head>
+  <body>
+    <div class="container">
+      <div class="card">
+        <div class="profile">
+          <img
+            src="https://via.placeholder.com/130"
+            alt="Profile Picture"
+            class="profile-image"
+          />
+          <h1>Your Name</h1>
+          <p>
+            Creative Developer & Designer<br />Building digital experiences that
+            matter
+          </p>
+        </div>
+
+        <div class="links">
+          <a
+            href="https://your-website.com"
+            class="link"
+            onclick="trackClick('Website')"
+          >
+            <span>🌐 Visit My Website</span>
+          </a>
+          <a
+            href="https://your-portfolio.com"
+            class="link"
+            onclick="trackClick('Portfolio')"
+          >
+            <span>💼 View Portfolio</span>
+          </a>
+          <a
+            href="https://your-blog.com"
+            class="link"
+            onclick="trackClick('Blog')"
+          >
+            <span>📝 Read My Blog</span>
+          </a>
+          <a
+            href="https://your-shop.com"
+            class="link"
+            onclick="trackClick('Shop')"
+          >
+            <span>🛍️ Shop Now</span>
+          </a>
+          <a
+            href="mailto:your@email.com"
+            class="link"
+            onclick="trackClick('Email')"
+          >
+            <span>✉️ Email Me</span>
+          </a>
+          <a
+            href="https://calendly.com/yourlink"
+            class="link"
+            onclick="trackClick('Calendar')"
+          >
+            <span>📅 Book a Meeting</span>
+          </a>
+        </div>
+
+        <div class="social-links">
+          <a
+            href="https://twitter.com/yourusername"
+            class="social-link"
+            title="Twitter"
+            onclick="trackClick('Twitter')"
+            >𝕏</a
+          >
+          <a
+            href="https://instagram.com/yourusername"
+            class="social-link"
+            title="Instagram"
+            onclick="trackClick('Instagram')"
+            >📷</a
+          >
+          <a
+            href="https://linkedin.com/in/yourusername"
+            class="social-link"
+            title="LinkedIn"
+            onclick="trackClick('LinkedIn')"
+            >in</a
+          >
+          <a
+            href="https://github.com/yourusername"
+            class="social-link"
+            title="GitHub"
+            onclick="trackClick('GitHub')"
+            >🐙</a
+          >
+          <a
+            href="https://youtube.com/@yourusername"
+            class="social-link"
+            title="YouTube"
+            onclick="trackClick('YouTube')"
+            >▶️</a
+          >
+        </div>
+
+        <div class="stats">
+          <div class="stat">
+            <span class="stat-number">10K+</span>
+            <span class="stat-label">Followers</span>
+          </div>
+          <div class="stat">
+            <span class="stat-number">50+</span>
+            <span class="stat-label">Projects</span>
+          </div>
+          <div class="stat">
+            <span class="stat-number">5+</span>
+            <span class="stat-label">Years</span>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script>
+      // Simple analytics tracking
+      function trackClick(linkName) {
+        console.log("Link clicked:", linkName);
+        // If using Google Analytics
+        if (typeof gtag !== "undefined") {
+          gtag("event", "click", {
+            event_category: "Link",
+            event_label: linkName,
+          });
+        }
+      }
+
+      // View counter (stores in localStorage)
+      let views = localStorage.getItem("pageViews") || 0;
+      views = parseInt(views) + 1;
+      localStorage.setItem("pageViews", views);
+      console.log("Page views:", views);
+    </script>
+  </body>
+</html>
